@@ -1,16 +1,21 @@
 ---
+//Components
+import QuoteButton from "../components/QuoteButton.astro";
+import SecondaryButton from "../components/SecondaryButton.astro";
+import Navigation from "../components/Navigation.astro";
 
+//Layouts
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../layouts/Hero.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+    <Hero>
+        <Navigation slot="nav"></Navigation>
+        <h1 class="pt-3 text-6xl tracking-tight leading-tight text-white font-Bebas">Experienced</h1>
+        <p class="py-2 text-gray-100 font-Inter md:text-lg">This is how our clients describe our concrete solutions!</p>
+        <QuoteButton title="Browse Services"></QuoteButton>
+        <SecondaryButton title="Learn More"></SecondaryButton>
+    </Hero>
+	
+</MainLayout>
