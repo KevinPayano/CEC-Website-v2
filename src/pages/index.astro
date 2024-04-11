@@ -1,8 +1,9 @@
 ---
 //Components
-import QuoteButton from "../components/QuoteButton.astro";
+import QuoteButton from "../components/PrimaryButton.astro";
 import SecondaryButton from "../components/SecondaryButton.astro";
 import Navigation from "../components/Navigation.astro";
+import Nav2 from "../components/Nav2.astro";
 
 //Layouts
 import MainLayout from "../layouts/MainLayout.astro";
@@ -11,7 +12,8 @@ import Hero from "../layouts/Hero.astro";
 
 <MainLayout>
     <Hero>
-        <Navigation slot="nav"></Navigation>
+        <!-- <Navigation slot="nav"></Navigation> -->
+        <Nav2 slot="nav"></Nav2>
         <h1 class="pt-3 text-6xl tracking-tight leading-tight text-white font-Bebas">Experienced</h1>
         <p class="py-2 text-gray-100 font-Inter md:text-lg">This is how our clients describe our concrete solutions!</p>
         <QuoteButton title="Browse Services"></QuoteButton>
