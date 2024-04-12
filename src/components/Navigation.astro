@@ -1,79 +1,100 @@
 ---
 import { Image } from 'astro:assets';
 import CECLogo from '../assets/CEC Logo.png';
+
+import PrimaryButton from './PrimaryButton.astro';
 ---
 
-<header x-data="{ mobileMenuOpen: false }" class="relative">
+<header x-data="{ mobileMenuOpen: false }" class="bg-zinc-700">
 
-  <!-- Desktop Navigation Starts -->
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <!-- Desktop Navigation Starts -->
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-5 lg:px-8" aria-label="Global">
 
-      <!-- Desktop Logo Starts -->
-      <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5 leading-6">
-          <span class="sr-only">Concrete Experts Company Logo Home Button</span>
-          <Image src={CECLogo} alt="Concrete Experts Company Logo" class="w-52 md:w-64 xl:w-72"></Image>
-        </a>
-      </div>
-      <!-- Desktop Logo Ends -->
+        <!-- Desktop Logo Starts -->
+        <div class="flex lg:flex-1">
+            <a href="/" class="-m-1.5 p-1.5">
+                <span class="sr-only">Concrete Experts Company Logo Home Button</span>
+                <Image src={CECLogo} alt="" class="w-52 md:w-64 xl:w-72"></Image>
+            </a>
+        </div>
+        <!-- Desktop Logo Ends -->
 
-      <!-- Hamburger Icon Starts -->
-      <div class="flex lg:hidden">
-        <button @click="mobileMenuOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-200">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-      </div>
-      <!-- Hamburger Icon Ends -->
+        <!-- Hamburger Icon Starts -->
+        <div class="flex lg:hidden">
+            <button @click="mobileMenuOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-100">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <!-- Hamburger Icon Ends -->
 
-      <!-- Desktop Links Start -->
-      <div class="hidden lg:flex lg:gap-x-12 *:text-sm *:font-medium *:leading-6 *:text-zinc-200">
-        <a href="/#featuresSection">Services</a>
-        <a href="/about">About Us</a>
-        <a href="/#portfolioSection">Portfolio</a>
-        <a href="/contact">Contact Us</a>
-      </div>
-      <!-- Desktop Links Ends -->
-      
+        <!-- Desktop Links Starts -->
+        <div class="hidden lg:flex lg:gap-x-12 *:text-sm *:font-medium *:leading-6 *:text-zinc-200">
+            <a href="#" class="">Services</a>
+            <a href="#" class="">About Us</a>
+            <a href="#" class="">Portfolio</a>
+            <a href="#" class="">Contact Us</a>
+        </div>
+        
+
+        <!-- Right Links -->
+        <div class="hidden items-center lg:flex lg:gap-x-12 lg:flex-1 lg:justify-end *:text-sm *:font-medium *:leading-6 *:text-zinc-200">
+            <a href="#" class="">(336) 666-3247</a>
+            <PrimaryButton href="#" title="Get a Quote"></PrimaryButton>
+        </div>
+        <!-- Desktop Links Ends -->
+
     </nav>
-  <!-- Desktop Navigation Ends -->
+    <!-- Desktop Navigation Ends -->
 
-  <!-- Mobile Navigation Starts -->
-  <div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen" class="lg:hidden" role="dialog" aria-modal="true">
-  
-    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-zinc-500 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <!-- Mobile Navigation Starts -->
+    <div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen" class="lg:hidden" role="dialog" aria-modal="true">
 
-      <div class="flex items-center justify-between">
-        <a href="/" class="-m-1.5 p-1.5 text-md font-semibold leading-6">
-          <span class="sr-only">Concrete Experts Company Logo Home Button</span>
-          <Image src={CECLogo} alt="Concrete Experts Company Logo" class="w-52 md:w-64 xl:w-72"></Image>
-        </a>
+        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-zinc-700 p-5 sm:max-w-sm">
 
-        <button @click="mobileMenuOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-zinc-200">
-          <span class="sr-only">Close menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+            <!-- Logo & Close Button Container Start -->
+            <div class="flex items-center justify-between">
+                <!-- Logo Image Button -->
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Concrete Experts Company Logo Home Button</span>
+                    <Image src={CECLogo} alt="" class="w-52 md:w-64 xl:w-72"></Image>
+                </a>
 
-      <div class="mt-6 flow-root">
+                <!-- Close Button -->
+                <button @click="mobileMenuOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-zinc-100">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Logo & Close Button Container Ends -->
 
-        <div class="-my-6">
-          <div class="space-y-2 py-6 *:-mx-3 *:block *:px-3 *:py-2 *:font-medium *:leading-7 *:text-zinc-200 ">
-            <a href="/#featuresSection" @click="mobileMenuOpen = false">Services</a>
-            <a href="/about" @click="mobileMenuOpen = false">About Us</a>
-            <a href="/#portfolioSection" @click="mobileMenuOpen = false">Portfolio</a>
-            <a href="/contact" @click="mobileMenuOpen = false">Contact Us</a>
-          </div>
+            <!-- Links Container Starts -->
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-100">
+
+                    <div class="space-y-2 py-6 *:-mx-3 *:block *:px-3 *:py-2 *:font-medium *:leading-7 *:text-zinc-200">
+                        <a href="#" @click="mobileMenuOpen = false" class="">Services</a>
+                        <a href="#" @click="mobileMenuOpen = false" class="">About Us</a>
+                        <a href="#" @click="mobileMenuOpen = false" class="">Portfolio</a>
+                        <a href="#" @click="mobileMenuOpen = false" class="">Contact Us</a>
+                    </div>
+
+                    <div class="py-4 space-y-4 *:-mx-3 *:block *:px-3 *:font-medium *:leading-7 *:text-zinc-200">
+                        <a href="#" @click="mobileMenuOpen = false" class="">(336) 666-3247</a>
+                        <PrimaryButton href="#" title="Get a Quote" @click="mobileMenuOpen = false"></PrimaryButton>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Links Container Ends -->
+
         </div>
 
-      </div>
-
     </div>
-  </div>
-  <!-- Mobile Navigation Ends -->
-
+    <!-- Mobile Navigation Ends -->
 </header>
+  
