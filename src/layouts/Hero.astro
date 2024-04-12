@@ -1,12 +1,20 @@
 ---
+import { Image } from 'astro:assets';
+import BGImage from '../assets/Image-1.jpg';
 
+import PrimaryButton from "../components/PrimaryButton.astro";
+import SecondaryButton from "../components/SecondaryButton.astro";
 ---
 
-<section class="bg-[url('img/Image-22.jpg')] bg-no-repeat bg-cover bg-center bg-gray-900/70 bg-blend-multiply">
+<section class="bg-black/70 h-screen">
+    <Image src={BGImage} alt="" class="absolute w-full -z-10"></Image>
     <slot name="nav"></slot>
-    <div class="relative mx-auto max-w-screen-xl text-white sm:py-4 md:py-5 lg:my-18">
-        <div class="px-3 mb-6 max-w-screen-md sm:px-4 md:px-5">
-            <slot></slot>
-        </div> 
+    <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-16 z-1">
+        <div class="mb-6 max-w-screen-lg lg:mb-0">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
+            <p class="mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl">The need for energy is universal. That's why Flowbite scientists and engineers are pioneering new research and pursuing new technologies to reduce emissions while creating more efficient fuels. We're committed to responsibly meeting the world's energy needs.</p>
+            <PrimaryButton title="Browse Services"></PrimaryButton>
+            <SecondaryButton title="Learn More"></SecondaryButton>
+        </div>             
     </div>
 </section>
