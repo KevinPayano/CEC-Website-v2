@@ -1,0 +1,56 @@
+---
+
+---
+
+<section>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+
+        <div class="container" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
+            <div class="relative" style="height:200px;">
+                <!-- Slide 1 Start -->
+                <div class="absolute w-full" style="height:200px;background-color:blue;" x-show="activeSlide === 1" 
+                     x-transition:enter="transition ease-in-out duration-1000"
+                     x-transition:enter-start="-ml-5 opacity-0"
+                     x-transition:enter-end="ml-0 opacity-100"
+                     x-transition:leave="transition ease-in-out duration-1000"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0">
+                    Slide 1
+                </div>
+                <!-- Slide 1 Ends -->
+
+                <!-- Slide 2 Starts -->
+                <div class="absolute w-full" style="height:200px;background-color:orange;" x-show="activeSlide === 2"
+                     x-transition:enter="transition ease-in-out duration-1000"
+                     x-transition:enter-start="-ml-5 opacity-0"
+                     x-transition:enter-end="ml-0 opacity-100"
+                     x-transition:leave="transition ease-in-out duration-1000"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0">
+                    Slide 2
+                </div>
+                <!-- Slide 2 Ends -->
+
+                <!-- Slide 3 Starts -->
+                <div class="absolute w-full" style="height:200px;background-color:green;" x-show="activeSlide === 3"
+                     x-transition:enter="transition ease-in-out duration-1000"
+                     x-transition:enter-start="-ml-5 opacity-0"
+                     x-transition:enter-end="ml-0 opacity-100"
+                     x-transition:leave="transition ease-in-out duration-1000"
+                     x-transition:leave-start="opacity-100"
+                     x-transition:leave-end="opacity-0">
+                    Slide 3
+                </div>
+                <!-- Slide 3 Ends -->
+            </div>
+
+            <!-- Prev/Next Buttons Starts -->
+            <div class="box flex flex-space-between flex-middle">
+                <button x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1">←</button>
+                <button x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1">→</button>
+            </div>
+            <!-- Prev/Next Buttons Ends -->
+        </div>
+
+    </div>
+</section>
