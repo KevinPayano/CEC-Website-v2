@@ -2,25 +2,43 @@
 
 ---
 
-<section>
+<section class="">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 
-        <div class="container" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
-            <div class="relative" style="height:200px;">
+        <div class="" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
+            <div class="max-w-screen-md mx-auto relative" style="height:200px;">
                 <!-- Slide 1 Start -->
-                <div class="absolute w-full" style="height:200px;background-color:blue;" x-show="activeSlide === 1" 
+                <div class="absolute w-full" x-show="activeSlide === 1" 
                      x-transition:enter="transition ease-in-out duration-1000"
                      x-transition:enter-start="-ml-5 opacity-0"
                      x-transition:enter-end="ml-0 opacity-100"
                      x-transition:leave="transition ease-in-out duration-1000"
                      x-transition:leave-start="opacity-100"
                      x-transition:leave-end="opacity-0">
-                    Slide 1
+                        <div class="mx-auto max-w-2xl lg:max-w-4xl">
+                            <figure class="mt-10">
+                                <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+                                    <p>“Working with Concrete Experts Company was a breeze. They delivered exceptional results and exceeded my expectations.”</p>
+                                </blockquote>
+                                <figcaption class="mt-10">
+                                    <div class="mt-4 flex items-center justify-center space-x-3 divide-x divide-zinc-400 text-base">
+                                        <p class="font-semibold text-gray-900">John Doe</p>
+                                        <div class="flex items-center p-2">
+                                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
                 </div>
                 <!-- Slide 1 Ends -->
 
                 <!-- Slide 2 Starts -->
-                <div class="absolute w-full" style="height:200px;background-color:orange;" x-show="activeSlide === 2"
+                <div class="absolute w-full bg-yellow-200 border-2 rounded-md border-zinc-700" style="height:200px;" x-show="activeSlide === 2"
                      x-transition:enter="transition ease-in-out duration-1000"
                      x-transition:enter-start="-ml-5 opacity-0"
                      x-transition:enter-end="ml-0 opacity-100"
@@ -32,7 +50,7 @@
                 <!-- Slide 2 Ends -->
 
                 <!-- Slide 3 Starts -->
-                <div class="absolute w-full" style="height:200px;background-color:green;" x-show="activeSlide === 3"
+                <div class="absolute w-full bg-green-200 border-2 rounded-md border-zinc-700" style="height:200px;" x-show="activeSlide === 3"
                      x-transition:enter="transition ease-in-out duration-1000"
                      x-transition:enter-start="-ml-5 opacity-0"
                      x-transition:enter-end="ml-0 opacity-100"
