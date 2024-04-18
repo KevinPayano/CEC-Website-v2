@@ -134,12 +134,26 @@
             </div>
             <!-- Slide Container Ends -->
 
-            <!-- Prev/Next Buttons Starts -->
-            <div class="box flex flex-space-between flex-middle">
-                <button x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1">←</button>
-                <button x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1">→</button>
+            <!-- Prev/Next Controls Start -->
+            <div class="flex flex-space-between flex-middle">
+
+                <!-- Prev Button -->
+                <button type="button" x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="flex items-center justify-center px-4 cursor-pointer ">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-orange-600 bg-orange-400/10 sm:w-10 sm:h-10 hover:bg-orange-400/25">
+                        <svg aria-hidden="true" class="w-5 h-5 text-orange-600 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 19l-7-7l7-7m7 7H5"/></svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+
+                <!-- Next Button -->
+                <button type="button" x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1" class="flex items-center justify-center px-4 cursor-pointer ">
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-orange-600 bg-orange-400/10 sm:w-10 sm:h-10 hover:bg-orange-400/25">
+                        <svg aria-hidden="true" class="w-5 h-5 text-orange-600 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
-            <!-- Prev/Next Buttons Ends -->
+            <!-- Prev/Next Controls End -->
 
         </div>
         <!-- Testimonial Container Ends -->
