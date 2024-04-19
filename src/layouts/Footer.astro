@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import CECLogo from "../assets/CEC Logo.png";
+---
+
+<footer class="bg-zinc-900 p-4 py-8 md:p-8 lg:p-10">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <div class="sm:items-center sm:justify-between sm:flex">
+            <a href="/" class="flex items-center justify-center mb-4 lg:mb-0">
+                <span class="sr-only">Concrete Experts Company Logo Home Button</span>
+                <Image src={CECLogo} alt="" class="w-52 md:w-64 xl:w-72"></Image>    
+            </a>
+            <ul class="flex flex-wrap justify-center items-center mb-4 text-zinc-200 lg:mb-0 ">
+                <li>
+                    <a href="/#featuresSection" class="mr-4 hover:underline md:mr-6">Services</a>
+                </li>
+                <li>
+                    <a href="/about" class="mr-4 hover:underline md:mr-6">About Us</a>
+                </li>
+                <li>
+                    <a href="/#portfolioSection" class="mr-4 hover:underline md:mr-6">Portfolio</a>
+                </li>
+                <li>
+                    <a href="/contact" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+            
+        </div>
+        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8">
+        <div class="sm:items-center sm:justify-between sm:flex">
+            <span class="text-sm text-center text-gray-400">© 2024 <a href="/" class="hover:underline">Concrete Experts Company</a>. All Rights Reserved.</span>
+            <div class="flex justify-center mt-4 space-x-6 sm:mt-0">
+                <span class="text-sm text-center text-gray-400">Site proudly built and maintained by <a href="https://codenhammer.com/" class="hover:underline">CodeNHammer.com</a></span>
+            </div> 
+        </div>
+    </div>
+</footer>
