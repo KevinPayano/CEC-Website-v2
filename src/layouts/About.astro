@@ -1,5 +1,7 @@
 ---
-
+//Image
+import { Image } from "astro:assets";
+import AboutImage from "../assets/About-Image.jpg";
 ---
 
 <section class="bg-white">
@@ -53,6 +55,6 @@
 
         </div>
         <!-- Picture -->
-        <img class="hidden mx-auto mb-4 sm:flex" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/social-proof/table-professor.svg" alt="table professor illustration">
+        <Image src={AboutImage} alt="" class="hidden rounded-md mx-auto mb-4 sm:flex"></Image>
     </div>
 </section>

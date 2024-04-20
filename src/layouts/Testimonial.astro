@@ -6,7 +6,7 @@
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 
         <!-- Testimonial Container Starts -->
-        <div class="" x-data="{ activeSlide: 1, slides: [1, 2, 3, 4] }">
+        <div class="relative" x-data="{ activeSlide: 1, slides: [1, 2, 3, 4] }">
 
             <!-- Slides Container Starts -->
             <div class="max-w-screen-md mx-auto relative" style="height:200px;">
@@ -135,7 +135,7 @@
             <!-- Slide Container Ends -->
 
             <!-- Prev/Next Controls Start -->
-            <div class="bg-yellow-500 flex">
+            <div class="flex justify-between absolute w-full inset-0">
 
                 <!-- Prev Button -->
                 <button type="button" x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1" class="flex items-center justify-center px-4 cursor-pointer ">
@@ -152,6 +152,7 @@
                         <span class="sr-only">Next</span>
                     </span>
                 </button>
+                
             </div>
             <!-- Prev/Next Controls End -->
 
